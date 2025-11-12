@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meeting Summary Generator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-6">
+  <h1 class="text-3xl font-bold mb-4">🎤 Meeting Summary Generator</h1>
+  
+  <div class="bg-gray-800 p-6 rounded-2xl shadow-md w-full max-w-lg text-center">
+    <input type="file" id="fileInput" accept="audio/*,video/*" class="block w-full text-sm text-gray-300 border border-gray-700 rounded-lg cursor-pointer bg-gray-700 focus:outline-none" />
+    
+    <button id="uploadBtn" class="mt-4 bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg text-white font-semibold">
+      Generate Summary
+    </button>
+
+    <div id="status" class="mt-4 text-gray-400"></div>
+  </div>
+
+  <div id="output" class="mt-8 w-full max-w-3xl bg-gray-800 p-6 rounded-2xl shadow-md hidden">
+    <h2 class="text-2xl font-bold mb-3">📝 Meeting Summary</h2>
+    <pre id="result" class="bg-gray-900 p-3 rounded-lg text-left text-sm overflow-auto max-h-[400px] whitespace-pre-wrap"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
